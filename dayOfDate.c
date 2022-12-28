@@ -21,5 +21,5 @@ void main()
  s = s + (date + year + (year / 4) - 2) ; 
  s = s % 7 ; 
  printf("\nThe day is : %s", week[s]) ; 
- getch() ; 
+ 
 }

@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+public class largest
+{
+    public static void main(String args[])
+    {
+        int largests,smallest;
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
+        int d = sc.nextInt();
+        largests = (a>b)?((a>c)?(a>d?a:d):(c>d?c:d)):((b>c)?(b>d?b:d):(c>d?c:d));
+        smallest= (a<b)?((a<c)?(a<d?a:d):(c<d?c:d)):((b<c)?(b<d?b:d):(c<d?c:d));
+        System.out.println("Largest of"+a+","+b+","+c+","+d+"is:"+largests);
+        System.out.println("Smallest of"+a+","+b+","+c+","+d+"is:"+smallest);
+    }
+}

@@ -1,0 +1,69 @@
+import java.util.*;
+import java.io.*;
+class Staff_details
+{
+    Scanner scr = new Scanner(System.in);
+    String name;
+    double number;
+    int salary;
+    void read_data()
+    {
+        name = scr.next();
+        number = scr.nextDouble();
+        salary = scr.nextInt();
+    }
+    void display()
+    {
+        System.out.println("Name"+name);
+        System.out.println("Phone number"+number);
+        System.out.println("Salary"+salary);
+    }
+}
+class Teaching extends Staff_details
+{
+    String domain,pub;
+    void read_teaching()throws Exception
+    {
+        super.read_data();
+        System.out.println("Enter domain name and publications:");
+        domain = scr.next();
+        pub = scr.next();
+    }
+    void display_teaching()throws Exception
+    {
+        super.display();
+        System.out.println("Domain:"+domain);
+        System.out.println("pub:"+pub);
+    }
+}
+class Main
+{
+    public static void main(String args[])throws Exception
+    {
+        Scanner scr = new Scanner(System.in);
+        int ch;
+        int no;
+        System.out.println("Enter ur choice");
+        ch = scr.nextInt();
+        System.out.println("Enter the number of records");
+        no = scr.nextInt();
+        switch(ch)
+        {
+            case 1: Teaching[] t = new Teaching[no];
+            for(int i=0;i<no;i++)
+            {
+                System.out.println("Enter"+(i+1)+"details");
+                t[i]= new Teaching();
+                t[i].read_teaching();
+            }
+             for(int i=0;i<no;i++)
+            {
+                t[i].display_teaching();
+            }
+            break;
+            default: System.out.println("Wrong choice!");
+            break;
+        }
+    }
+}         
+           

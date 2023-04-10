@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+
+class Student {
+    int id;
+    String name;
+
+    // Default constructor
+    Student() {
+        System.out.println("Default constructor value:");
+        System.out.println("Student ID: " + id + ", Student Name: " + name);
+    }
+
+    // Parameterized constructor
+    Student(int i, String n) {
+        id = i;
+        name = n;
+        System.out.println("Parameterized Constructor value:");
+        System.out.println("Student ID: " + id + ", Student Name: " + name);
+    }
+
+    public static void main(String args[]) {
+        Student s = new Student();
+        Student st = new Student(34, "nishal");
+    }
+}
